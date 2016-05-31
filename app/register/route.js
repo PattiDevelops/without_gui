@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  flashMessages: Ember.inject.service(),
+
   actions:
   {
     register()
@@ -13,6 +15,7 @@ export default Ember.Route.extend({
       });
       user.save().then(() => {
         this.transitionTo('index');
+        this.get('flashMessages').success("Registration successful!");
       }, function() {
         console.log("Registering new user failed");
       });

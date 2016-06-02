@@ -1,0 +1,9 @@
+.validated-input .input-error {
+  font-size: 12px;
+}
+
+.validated-input .input-error .error {
+  padding: 8px 5px 0 0;
+  color: rgb(255, 65, 31);
+  text-align: left;
+}
